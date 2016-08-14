@@ -9,3 +9,7 @@ module.exports.renderAbout = function(req, res) {
 module.exports.renderContact = function(req, res) {
   res.render('static_pages/contact', {title: 'contact me'});
 };
+
+module.exports.renderError = function(req, res){
+  res.render('static_pages/error', {title: 'Undefined'});
+};
