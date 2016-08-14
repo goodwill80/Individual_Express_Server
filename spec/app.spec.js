@@ -70,6 +70,7 @@ describe("Server API", function(){
 
 
     it("if page undefined should return 404",   function(done){
+      console.log("in /users/undefined");
        supertest(app)
         .get('/users/undefined')
         .set('Accept', 'application/json')
