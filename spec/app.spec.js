@@ -6,39 +6,6 @@ var about_url = base_url + "about";
 var contact_url = base_url + "contact";
 var users_url = base_url + "users";
 
-//Server front end
-
-describe("Server Front end", function(){
-  describe("GET / homepage", function(){
-    it("is working and return code 200", function(done){
-      supertest(app)
-      .get("/")
-      .set('accept', 'text/html')
-      .expect('Content-Type', /html/)
-      .expect(200, done);
-    });
-  });
-});
-
-describe("GET / about page", function(){
-  it("is working and return code 200", function(done){
-    supertest(app)
-    .get('/about')
-    .set('accept', 'text/html')
-    .expect('Content-Type', /html/)
-    .expect(200, done);
-  });
-});
-
-describe("GET / contact page", function(){
-  it("is working and return code 200", function(done){
-    supertest(app)
-    .get('/contact')
-    .set('accept','text/html')
-    .expect('Content-Type', /html/)
-    .expect(200, done);
-  });
-});
 
 //Server API
 
@@ -75,16 +42,49 @@ describe("Server API", function(){
         .get('/users/undefined')
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
-        .expect(404)
-        .end(function(err, res){
-        if (err)
-         return done(err);
-          done();
-
-      });
-
+        .expect(404);
+         done();
     });
 
 
+  });
+});
+
+
+
+
+
+
+//Server front end
+
+describe("Server Front end", function(){
+  describe("GET / homepage", function(){
+    it("is working and return code 200", function(done){
+      supertest(app)
+      .get("/")
+      .set('accept', 'text/html')
+      .expect('Content-Type', /html/)
+      .expect(200, done);
+    });
+  });
+});
+
+describe("GET / about page", function(){
+  it("is working and return code 200", function(done){
+    supertest(app)
+    .get('/about')
+    .set('accept', 'text/html')
+    .expect('Content-Type', /html/)
+    .expect(200, done);
+  });
+});
+
+describe("GET / contact page", function(){
+  it("is working and return code 200", function(done){
+    supertest(app)
+    .get('/contact')
+    .set('accept','text/html')
+    .expect('Content-Type', /html/)
+    .expect(200, done);
   });
 });
