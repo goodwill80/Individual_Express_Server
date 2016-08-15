@@ -4,6 +4,7 @@ var compress = require('compression');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var expressLayouts = require('express-ejs-layouts');
+var cors = require('cors');
 
 module.exports = function(){
   var app = express();
@@ -14,7 +15,7 @@ module.exports = function(){
   } else if (process.env.NODE_ENV === "production"){
     app.use(compress());
   }
-
+  app.use(cors());
   app.use(bodyParser.urlencoded({
     extended: true
   }));
