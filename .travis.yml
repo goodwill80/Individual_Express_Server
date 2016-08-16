@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- node
+deploy:
+  provider: heroku
+  api_key:
+    secure: VqdfhwNwDrB/7HoqKU0QoPYRA15PQvoVFOYrD1YZhAGKtHvIWd3D2uSYhURrN7Em9STMx6H11+BQDubI18FRSwvqV4yCMGTeABLS8PZucN29VC09v2RitdY2mRoPwxzOL7D0vK1RWNwJBHFowBu2ax939EDJtS10hi0kQ9bY2VG7JfjXDYVDlCwEgminKFmiK8TO8gv+t/M99J/9C4lUv23Kar7Mb1ad+5B3fA6mMSZlUvJ2cdFUP94bz89CKcYtzA9BuwKMyq2yoesKT5tSYpTLOKjhhOHFvdDFvehlXlU453daToBFohFXTwqS6e5+LgIbaVoElHn+Cd4Bvyn750qqkkDT0qAQKTwQySmyRO0s3jEHsXdnbAs//O02unwecWBj513AcvYzdifBt6GeErCwjGYas7YPw1e9P9fJ+syzYVbUVqhqJPvCjMT5MikONCCp1vdLU8N9OX+lUJ7ZNcBCQt6paQUEWKstco0ndtC+ExXusan7HW4m7W84UnxPhwbLx4UdaCU2+JCX2uISfHDyxUW3m5ZHyPTQZHaIhGqDGY5+6Qxkj10U9YGViVGVHH//+fZF9YzPTYqISwJEi1pVxHMPFygmBcUWv2IMQo4uGbwDtwVftGX46mpqjP2sK+PaSDAW97Vy/r34VnepC8Zw5MK2HekuhSzIPV5NqRs=
+  app: enigmatic-gorge-78214
+  on:
+    repo: goodwill80/Individual_Express_Server

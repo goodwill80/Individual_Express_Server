@@ -6,6 +6,7 @@ module.exports= {
     res.json(members);
   },
 
+
   show: function(req, res){
     console.log("Individual Member");
 
