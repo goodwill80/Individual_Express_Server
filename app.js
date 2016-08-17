@@ -2,11 +2,20 @@ var express = require('./config/express');
 var app = express();
 
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+
+var mongo_url = process.env.MONGODB_URI || 'mongodb://localhost/myprofile';
+
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+mongoose.connect(mongo_url);
+
+
+
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 
 
